@@ -10,8 +10,8 @@
     <title>Tasks RestAPI</title>
 </head>
 <body>
-<div class="">
-    <h1 class="red">
+<div class="body">
+    <h1 class="title">
         Tasks RestAPI
     </h1>
 @yield('content')

@@ -35,9 +35,11 @@ class StoreRequest extends FormRequest
     {
         return [
             'name.required' => 'The field is required',
+            'creator.required' => 'The field is required',
             'name.unique' => 'This task name already exist',
             'task.required' => 'The field is required',
             'correct_answer.required' => 'The field is required',
+            'cost.required' => 'The field is required',
         ];
     }
 }

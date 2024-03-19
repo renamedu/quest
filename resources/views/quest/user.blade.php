@@ -1,20 +1,25 @@
 @extends('main')
 
 @section('content')
-    <div>
-        <h1>
+    <div class="login">
+        <div class="profile">
+        <h2>
             {{ $user->name }}
-        </h1>
+        </h2>
         <div>
             Balance: {{ $user->balance }}
         </div>
+        <div class="out-btn">
+            <a href="{{ route('quest.index') }}">out</a>
+        </div>
+        </div>
     </div>
-    <div>
-        <a href="{{ route('quest.index') }}">out</a>
+    <div class="quest-count">
+        <h3>
+            Quests Cleared
+        </h3>
     </div>
-    <div>
-        Quests Cleared
-        <table>
+        <table class="table">
             <thead>
             <tr>
                 <th>Name</th>
@@ -32,17 +37,13 @@
             @endforeach
             </tbody>
         </table>
+    <div class="quest-count">
+        <h3>
+            All Quests: {{ $quests->count() }}
+        </h3>
     </div>
-        <div>
-            <h1>
-                Tasks
-            </h1>
-        </div>
-    <h3>
-        Quests: {{ $quests->count() }}
-    </h3>
     <div>
-        <table>
+        <table class="table">
             <thead>
             <tr>
                 <th>Name</th>
